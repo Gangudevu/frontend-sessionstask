@@ -1,0 +1,18 @@
+mat-expansion-panel
+{
+    background-color: cadetblue !important;
+}
+
+.note-container
+{
+    margin-top: 10vh;
+    margin-left: 35vh;
+    width: 60vw;
+}
+
+.note-form
+{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10%;
+}

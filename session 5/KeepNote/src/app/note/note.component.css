@@ -1,0 +1,40 @@
+mat-expansion-panel
+{
+    background-color: cadetblue !important;
+}
+
+.note-container
+{
+    margin-top: 10vh;
+    margin-left: 15vh;
+    width: 50vw;
+}
+
+.note-form
+{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10%;
+}
+
+.card-container
+{
+    display: flex;
+    flex-direction: row;
+    margin: 10vh 15vw;
+    justify-content: space-around;
+}
+
+.note-card
+{
+    display: flex;
+    flex-direction: column;
+    background-color: cadetblue !important;
+    border-radius: 10%;
+    border: 2px solid coral;
+}
+
+
+/* How to keep your data permanent !!!! */
+
+/* By storing in Database, What is Database?  Any File (text, word, excel, xml, json) */

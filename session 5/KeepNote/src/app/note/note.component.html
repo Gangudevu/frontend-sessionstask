@@ -1,0 +1,55 @@
+<!-- HTML, CSS, Bootstrap, Angular Material -->
+
+<div class="note-container">
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Take a Note !!!!
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <form class="note-form" [formGroup]="noteForm" (ngSubmit)="addNote()">
+
+        <div class="note-form">
+
+            <mat-form-field>
+                <!-- <mat-label>Note Title</mat-label> -->
+                <input matInput placeholder="Enter Note Title" 
+                formControlName="title">
+
+                <mat-error *ngIf="noteForm.get('title').dirty && 
+                noteForm.get('title').hasError('required')">
+                    Note Title is required Field !!!
+                </mat-error>
+
+                <mat-error *ngIf="noteForm.get('title').dirty && 
+                noteForm.get('title').hasError('minlength')">
+                    Note Title must be more than 6 characters !!!
+                </mat-error>
+
+            </mat-form-field>
+
+            <mat-form-field>
+                <!-- <mat-label>Note Details</mat-label> -->
+                <textarea matInput placeholder="Enter Note Description" 
+                formControlName="text">
+                </textarea>
+            </mat-form-field>
+
+            <button class="btn btn-primary">Add Note!!</button>
+
+        </div>
+    </form>
+    </mat-expansion-panel>
+</div>
+
+
+<div class="card-container">
+
+    <mat-card class="note-card" *ngFor="let note of noteList">
+        <mat-card-title>{{note.title}}</mat-card-title>
+        <mat-card-content>{{note.text}}</mat-card-content>
+    </mat-card>
+
+</div>
+

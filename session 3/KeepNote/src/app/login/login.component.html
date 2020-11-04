@@ -1,0 +1,40 @@
+<div class="login-container">
+    <h1>SignUp Here !!!</h1>
+
+    <form class="login-form" #loginform="ngForm" (ngSubmit)="login(loginform)">
+        <div class="login-form">
+
+            <mat-form-field>
+                <input matInput name="username" placeholder="Enter UserName !!!" 
+                [(ngModel)]="userobj.username" #unameref="ngModel" 
+                required minlength="6">
+
+                <small *ngIf="unameref.touched && unameref.errors?.required" class="validation-error">
+                    UserName is Required Field !!!
+                </small>
+
+                <small *ngIf="unameref.touched && unameref.errors?.minlength" class="validation-error">
+                    UserName is of minimum 6 characters !!!
+                </small>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput name="userpass" placeholder="Enter Password !!!" 
+                [(ngModel)]="userobj.userpass" type="password" #upassref="ngModel"
+                required minlength="6">
+
+                <small *ngIf="upassref.touched && upassref.errors?.required" class="validation-error">
+                    Password is Required Field !!!
+                </small>
+
+                <small *ngIf="upassref.touched && upassref.errors?.minlength" class="validation-error">
+                    Password is of minimum 6 characters !!!
+                </small>
+            </mat-form-field>
+
+            <button class="btn btn-primary">Login!!!</button>
+
+        </div>
+
+    </form>
+</div>

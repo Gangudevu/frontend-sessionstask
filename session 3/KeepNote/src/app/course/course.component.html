@@ -1,0 +1,15 @@
+<h1>Course Details !!!</h1>
+
+<p>This is course Details !!!</p>
+
+<app-student></app-student>
+
+<div>
+    <!-- <input type="text" [value]="courseName" (input)="updateCourseName($event)"> -->
+
+    <input type="text" [(ngModel)]="stdobj.SName">
+
+    <p>
+        Course Name is :: {{courseName}}
+    </p>
+</div>

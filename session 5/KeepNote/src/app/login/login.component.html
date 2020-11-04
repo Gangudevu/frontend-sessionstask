@@ -1,0 +1,42 @@
+<div class="login-container">
+    <h1>SignUp Here!!!</h1>
+
+    <form class="login-form" #signUpForm="ngForm" (ngSubmit)="login()">
+        <div class="login-form">
+
+            <mat-form-field>
+                <!-- <mat-label>Note Title</mat-label> -->
+                <input matInput placeholder="Enter UserName" [(ngModel)]="userobj.username" #unameref="ngModel"
+                    name="username" required minlength="3">
+
+                <small *ngIf="unameref.touched && unameref.errors?.required">
+                    UserName is required field !!!!
+                </small>
+
+
+                <small *ngIf="unameref.touched && unameref.errors?.minlength">
+                    UserName must be of more than 6 characters !!!!
+                </small>
+
+
+            </mat-form-field>
+
+            <mat-form-field>
+                <!-- <mat-label>Note Details</mat-label> -->
+                <input matInput placeholder="Enter Password" [(ngModel)]="userobj.password" #upassref="ngModel"
+                    type="password" name="userpass" required minlength="3">
+
+                <small *ngIf="upassref.touched && upassref.errors?.required">
+                    User Password is required field !!!!
+                </small>
+
+                <small *ngIf="upassref.touched && upassref.errors?.minlength">
+                    User Password must be of more than 6 characters !!!!
+                </small>
+            </mat-form-field>
+
+            <button class="btn btn-primary">Login!!</button>
+
+        </div>
+    </form>
+</div>

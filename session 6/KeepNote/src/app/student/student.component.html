@@ -1,0 +1,74 @@
+<h1>Student Details !!!</h1>
+
+<!-- <h4>StudentName     :: {{sname}}</h4>
+<h4>StudentAge      :: {{sage}}</h4>
+<h4>StudentCity     :: {{scity}}</h4>
+<h4>StudentCountry  :: {{scountry}}</h4> -->
+
+<div>
+
+
+    <ul *ngFor="let stdobj of studentList" class="list-group">
+
+        <li class="list-group-item" *ngIf="stdobj.scountry == 'USA'"> 
+        
+            {{stdobj.sname}}  {{stdobj.sage}}  {{stdobj.scity}} {{stdobj.scountry}} 
+        
+        </li>
+        
+    </ul>
+
+
+    <ul *ngFor="let stdobj of studentList" class="list-group" 
+    [ngSwitch]="stdobj.scountry">
+
+        <li class="list-group-item text-success" *ngSwitchCase="'USA'"> 
+        
+            {{stdobj.sname}}  {{stdobj.sage}}   
+        
+        </li>
+
+        <li class="list-group-item text-primary" *ngSwitchCase="'UK'"> 
+        
+            {{stdobj.sname}}  {{stdobj.sage}}  
+        
+        </li>
+
+        <li class="list-group-item text-danger" *ngSwitchCase="'India'"> 
+        
+            {{stdobj.sname}}  {{stdobj.sage}}  
+        
+        </li>
+        
+    </ul>
+
+    <ul *ngFor="let stdobj of studentList" class="list-group">
+
+        <li class="list-group-item" *ngIf="stdobj.sage > 14"> 
+        
+            {{stdobj.sname}}  {{stdobj.sage}}  {{stdobj.scity}} {{stdobj.scountry}} 
+        
+        </li>
+        
+    </ul>
+
+    <hr>
+
+    <ul *ngFor="let stdobj of studentList" class="list-group">
+
+        <li> {{stdobj.sname}}  {{stdobj.sage}}  {{stdobj.scity}} {{stdobj.scountry}} </li>
+        
+    </ul>
+
+    <hr>
+
+
+    <ul *ngFor="let stdobj of studentList">
+
+        <li> {{stdobj.sname}} </li>
+        <li> {{stdobj.sage}} </li>
+        <li> {{stdobj.scity}} </li>
+        <li> {{stdobj.scountry}} </li>
+
+    </ul>
+</div>

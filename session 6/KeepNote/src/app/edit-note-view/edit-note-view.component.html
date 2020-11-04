@@ -1,0 +1,28 @@
+<div class="edit-note-container">
+
+    <h6>{{note.title}}</h6>
+
+    <form class="edit-note-form" [formGroup]="editnoteForm" (ngSubmit)="editNote()">
+
+        <div class="edit-note-form">
+
+            <mat-form-field>
+                <input matInput placeholder="Enter Note Title" formControlName="title">
+
+                <mat-error *ngIf="editnoteForm.get('title').dirty 
+                && editnoteForm.get('title').hasError('required')"> NoteTitle is required field</mat-error>
+
+            </mat-form-field>
+
+            <mat-form-field>
+                <textarea matInput placeholder="Enter Note Description" formControlName="text"></textarea>
+
+            </mat-form-field>
+
+            <button class="btn btn-primary">Add Note!!!</button>
+
+        </div>
+    </form>
+
+
+</div>

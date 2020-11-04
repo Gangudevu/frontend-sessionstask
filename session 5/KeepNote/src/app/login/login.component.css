@@ -1,0 +1,15 @@
+.login-container
+{
+    margin-top: 10vh;
+    margin-left: 15vh;
+    width: 50vw;
+
+    background-color: burlywood;
+    border-radius: 5%;
+}
+
+.login-form
+{
+    display: flex;
+    flex-direction: column;
+}

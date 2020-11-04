@@ -1,0 +1,46 @@
+mat-expansion-panel
+{
+    background-color: cadetblue;
+}
+
+.note-container
+{
+    margin-top: 10vh;
+    margin-left: 20vw;
+
+    width: 60vw;
+}
+
+.note-form
+{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.card-container
+{
+    display: flex;
+    flex-direction: row;
+    margin: 10vh 15vw;
+    justify-content: space-around;
+    /* background-color: cadetblue !important; */
+}
+
+.note-card
+{
+    display: flex;
+    flex-direction: column;
+    background-color: cadetblue !important;
+    border-radius: 10%;
+    border: 2px solid coral;
+}
+
+/* persistent :: permanent, continue to exist for long time */
+
+/* Data is permanent, What I mean in application development? */
+
+/* Store the data in permamnent location */
+/* What are the permanent storage for data? */
+/* Databases, files (text, word, excel, xml, json) */
+

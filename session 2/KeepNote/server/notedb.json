@@ -1,0 +1,19 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "noteTitle": "Java",
+      "noteDesc": "Java Launch Meeting"
+    },
+    {
+      "noteTitle": "Mean",
+      "noteDesc": "Mean Launch Meeting",
+      "id": 2
+    },
+    {
+      "noteTitle": "Mern",
+      "noteDesc": "Mern Launch Meeting",
+      "id": 3
+    }
+  ]
+}

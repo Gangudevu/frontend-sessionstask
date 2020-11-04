@@ -1,0 +1,50 @@
+<div class="note-container">
+
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Take a Note !!!
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <form class="note-form" [formGroup]="noteForm" (ngSubmit)="addNote()">
+
+        <div class="note-form">
+
+            <mat-form-field>
+                <input matInput placeholder="Enter Note Title" 
+                formControlName="noteTitle">
+
+                <mat-error *ngIf ="noteForm.get('noteTitle').dirty 
+                && noteForm.get('noteTitle').hasError('required')"> NoteTitle is required field</mat-error>
+
+            </mat-form-field>
+
+            <mat-form-field>
+                <textarea matInput placeholder="Enter Note Description" 
+                formControlName="noteDesc"></textarea>
+
+            </mat-form-field>
+
+            <button class="btn btn-primary">Add Note!!!</button>
+
+        </div>
+    </form>
+
+    </mat-expansion-panel>
+</div>
+
+
+<div class="card-container">
+
+    <mat-card class="note-card" *ngFor="let note of noteList">
+        <mat-card-title>
+            {{note.noteTitle}}
+        </mat-card-title>
+
+        <mat-card-content>
+            {{note.noteDesc}}
+        </mat-card-content>
+    </mat-card>
+
+</div>

@@ -1,0 +1,63 @@
+<h1>Student Details !!!!</h1>
+
+<!-- <h4>{{stdobj1.sName}}</h4>
+<h4>{{stdobj1.sAge}}</h4> -->
+
+
+<div class="container">
+
+    <ul class="list-group" *ngFor="let stdobj of studentList" [ngSwitch]="stdobj.scountry">
+        <li class="list-group-item text-primary" *ngSwitchCase="'USA'">
+            {{stdobj.sname}} {{stdobj.sage}} {{stdobj.scity}} {{stdobj.scountry}}</li>
+
+        <li class="list-group-item text-danger" *ngSwitchCase="'India'">
+            {{stdobj.sname}} {{stdobj.sage}} {{stdobj.scity}} {{stdobj.scountry}}</li>
+
+        <li class="list-group-item text-success" *ngSwitchCase="'UK'">
+            {{stdobj.sname}} {{stdobj.sage}} {{stdobj.scity}} {{stdobj.scountry}}</li>
+    </ul>
+
+    <hr>
+
+
+    <ul class="list-group" *ngFor="let stdobj of studentList">
+        <li class="list-group-item" *ngIf="stdobj.sage > 14">
+            {{stdobj.sname}} {{stdobj.sage}} {{stdobj.scity}} {{stdobj.scountry}}</li>
+    </ul>
+
+    <hr>
+
+
+    <ul class="list-group" *ngFor="let stdobj of studentList">
+        <li class="list-group-item" *ngIf="stdobj.scountry == 'USA'">
+            {{stdobj.sname}} {{stdobj.sage}} {{stdobj.scity}} {{stdobj.scountry}}</li>
+    </ul>
+
+    <hr>
+
+
+    <ul class="list-group" *ngFor="let stdobj of studentList">
+        <li class="list-group-item">{{stdobj.sname}} {{stdobj.sage}} {{stdobj.scity}} {{stdobj.scountry}}</li>
+    </ul>
+
+    <hr>
+
+    <ul class="list-group" *ngFor="let stdobj of studentList">
+        <li>
+            {{stdobj.sname}}
+        </li>
+        <li>
+            {{stdobj.sage}}
+        </li>
+        <li>
+            {{stdobj.scity}}
+        </li>
+        <li>
+            {{stdobj.scountry}}
+        </li>
+    </ul>
+
+
+</div>
+
+<!-- For UI, I wanted to use HTML, BootStrap, CSS, Angular Material -->
